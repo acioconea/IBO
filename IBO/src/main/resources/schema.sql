@@ -56,4 +56,3 @@ CREATE TABLE TransactionHistory (
     broker VARCHAR(255),
     fees FLOAT
 );
-

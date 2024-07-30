@@ -20,7 +20,7 @@ public class BondsController {
         return ResponseEntity.ok(bondsService.saveBonds(bonds));
     }
 
-    @GetMapping("/all")
+    @GetMapping("/")
     public ResponseEntity<List<Bonds>> getAllBonds() {
         return ResponseEntity.ok(bondsService.getAllBonds());
     }
