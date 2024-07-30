@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS Stocks;
 DROP TABLE IF EXISTS Bonds;
 DROP TABLE IF EXISTS FuturesContracts;
 DROP TABLE IF EXISTS OptionsContracts;
+DROP TABLE IF EXISTS TransactionHistory;
 
 -- Create table for Stocks
 CREATE TABLE Stocks (
@@ -42,4 +43,17 @@ CREATE TABLE OptionsContracts (
     expirationDate DATE,
     premium FLOAT,
     issueDate DATE
+);
+
+CREATE TABLE TransactionHistory (
+    transactionID INT AUTO_INCREMENT PRIMARY KEY,
+    instrumentID INT NOT NULL,
+    instrumentType ENUM('Stock', 'Bond', 'Future', 'Option') NOT NULL,
+    transactionDate DATE NOT NULL,
+    transactionType ENUM('Buy', 'Sell') NOT NULL,
+    quantity INT NOT NULL,
+    pricePerUnit FLOAT NOT NULL,
+    totalAmount FLOAT NOT NULL,
+    broker VARCHAR(255),
+    fees FLOAT
 );
