@@ -13,7 +13,7 @@ CREATE TABLE Stocks (
     symbol VARCHAR(255),
     revenueGrowth FLOAT,
     dividendYield FLOAT,
-    marketCapitalization BIGINT
+    marketCap BIGINT
 );
 
 CREATE TABLE BONDS (
