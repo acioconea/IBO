@@ -16,14 +16,13 @@ CREATE TABLE Stocks (
     marketCapitalization BIGINT
 );
 
--- Create table for Bonds
-CREATE TABLE Bonds (
+CREATE TABLE BONDS (
     id INT AUTO_INCREMENT PRIMARY KEY,
     country VARCHAR(255) NOT NULL,
-    nrYears INT,
-    interestRate FLOAT,
+    nr_years INT,
+    interest_rate FLOAT,
     issuer VARCHAR(255),
-    issueDate DATE
+    issue_date DATE
 );
 
 -- Create table for FuturesContracts
@@ -57,3 +56,4 @@ CREATE TABLE TransactionHistory (
     broker VARCHAR(255),
     fees FLOAT
 );
+

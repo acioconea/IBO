@@ -5,7 +5,7 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "Bonds")
+@Table(name = "BONDS")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,18 +15,18 @@ public class Bonds {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(nullable = false)
+    @Column(name="country",nullable = false)
     private String country;
 
-    @Column
-    private int nrYears;
+    @Column(name="nr_years")
+    private int nr_years;
 
-    @Column
-    private float interestRate;
+    @Column(name="interest_rate")
+    private float interest_rate;
 
-    @Column
+    @Column(name="issuer")
     private String issuer;
 
-    @Column
-    private LocalDate issueDate;
+    @Column(name="issue_date")
+    private LocalDate issue_date;
 }
